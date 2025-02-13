@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fale Conosco</title>
+	<link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header> <!-- Cabeçalho -->
+		<div class="logos"> <!-- Box para logos -->
+			<div class="uniube_logo"> <!-- Logo Uniube -->
+				<a href="https://www.uniube.br" target="_blank" rel="external" title="Acesse o site da Uniube">
+					<img src="imagens/logo_uni.png" alt="Logo da Uniube">
+				</a>
+			</div>
+			<div class="nba_logo"> <!-- Logo NBA -->
+				<a href="https://www.nba.com/" target="_blank" rel="external" title="Acesse o site da NBA">
+					<img src="imagens/logo_nba.png" alt="Logo NBA">
+				</a>
+			</div>
+		</div>
+		<h1>National Basketball Association</h1> <!-- Título geral -->
+	</header>
+
+	<nav> <!-- Barra de navegação -->
+		<ul>
+			<li><a href="index.html" rel="home" target="_self" title="Volte para a homepage">Home</a></li>
+			<!-- Página home -->
+			<li><a href="links.html" rel="next" target="_self" title="Acesse nossa página de links">Links</a></li>
+			<!-- Página links -->
+			<li><a href="imagens.html" rel="next" target="_self" title="Acesse nossa página de imagens">Imagens</a></li>
+			<!-- Página imagens -->
+			<li><a href="fale_conosco.html" rel="next" target="_self" title="Acesse nossa página de contatos">Fale
+					Conosco</a></li> <!-- Página fale conosco -->
+		</ul>
+	</nav>
+
+	<main> <!-- Área principal da página -->
+		<h2>Preencha o formulário abaixo que entraremos em contato</h2>
+		<form action="fale_conosco.php" method="post" class="responsivo"> <!-- Formulário -->
+			<fieldset>
+				<legend>Dados Pessoais:</legend>
+				<div class="form_field"> <!-- Box nome -->
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" id="nome" title="Digite seu nome" size="36" maxlength="35"
+						placeholder="Digite seu nome completo" autofocus required>
+				</div>
+				<div class="form_field"> <!-- Box idade -->
+					<label for="idade">Idade:</label>
+					<input type="number" name="idade" id="idade" title="Informe sua idade" min="16" max="99" required
+						placeholder="00">
+				</div>
+				<fieldset>
+					<legend>Sexo:</legend>
+					<div class="form_field"> <!-- Box sexo -->
+						<input type="radio" name="sexo" id="sexo_masc" title="Sexo Masculino" value="M" required>
+						<label for="sexo_masc">Masculino</label>
+						<input type="radio" name="sexo" id="sexo_fem" title="Sexo Feminino" value="F" required>
+						<label for="sexo_fem">Feminino</label>
+					</div>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Como podemos entrar em contato com você?</legend>
+				<div class="form_field"> <!-- Box telefone -->
+					<label for="telefone">Telefone:</label>
+					<input type="tel" name="telefone" id="telefone" title="Digite seu telefone" size="11" maxlength="11"
+						pattern="[0-9]{11}" required placeholder="(00)00000-0000">
+				</div>
+				<div class="form_field">
+					<label for="email">E-mail:</label> <!-- Box e-mail -->
+					<input type="email" name="email" id="email" title="Digite seu e-mail" required
+						placeholder="a@a.com">
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Qual seu time e jogador favorito?</legend>
+				<div class="form_field"> <!-- Box time favorito -->
+					<label for="time_fav">Selecione seu time:</label>
+					<select name="time_fav" id="time_fav" title="Escolha seu time favorito">
+						<option value="" selected>- Escolha seu time favorito -</option>
+						<optgroup label="Conferência Leste">
+							<option value="hawks">Atlanta Hawks</option>
+							<option value="celtics">Boston Celtics</option>
+							<option value="nets">Brooklyn Nets</option>
+							<option value="hornets">Charlotte Hornets</option>
+							<option value="bulls">Chicago Bulls</option>
+							<option value="cavs">Cleveland Cavaliers</option>
+							<option value="pistons">Detroit Pistons</option>
+							<option value="pacers">Indiana Pacers</option>
+							<option value="heat">Miami Heat</option>
+							<option value="bucks">Milwaukee Bucks</option>
+							<option value="knicks">New York Knicks</option>
+							<option value="magic">Orlando Magic</option>
+							<option value="sixers">Philadelphia 76ers</option>
+							<option value="raptors">Toronto Raptors</option>
+							<option value="wizards">Washington Wizards</option>
+						</optgroup>
+						<optgroup label="Conferência Oeste">
+							<option value="mavs">Dallas Mavericks</option>
+							<option value="nuggets">Denver Nuggets</option>
+							<option value="warriors">Golden State Warriors</option>
+							<option value="rockets">Houston Rockets</option>
+							<option value="clippers">Los Angeles Clippers</option>
+							<option value="lakers">Los Angeles Lakers</option>
+							<option value="grizzlies">Memphis Grizzlies</option>
+							<option value="wolves">Minnesota Timberwolves</option>
+							<option value="pelicans">New Orleans Pelicans</option>
+							<option value="thunder">Oklahoma City Thunder</option>
+							<option value="suns">Phoenix Suns</option>
+							<option value="blazers">Portland Trail Blazers</option>
+							<option value="kings">Sacramento Kings</option>
+							<option value="spurs">San Antonio Spurs</option>
+							<option value="jazz">Utah Jazz</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="form_field"> <!-- Box jogador favorito -->
+					<label for="jogador">Digite seu jogador favorito:</label>
+					<input type="text" name="jogador" id="jogador" list="jogador_fav"
+						title="Digite seu jogador favorito" placeholder="Digite">
+					<datalist id="jogador_fav">
+						<option value="Damian Lillard"></option>
+						<option value="Donovan Mitchell"></option>
+						<option value="Giannis Antetokounmpo"></option>
+						<option value="James Harden"></option>
+						<option value="Jason Tatum"></option>
+						<option value="Joel Embiid"></option>
+						<option value="Kevin Durant"></option>
+						<option value="Kawhi Leonard"></option>
+						<option value="Klay Thompson"></option>
+						<option value="Lebron James"></option>
+						<option value="Luka Doncic"></option>
+						<option value="Ja Morant"></option>
+						<option value="Nikola Jokic"></option>
+						<option value="Paul George"></option>
+						<option value="Setphen Curry"></option>
+
+					</datalist>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Onde você assiste os jogos?</legend>
+				<div class="form_field"> <!-- Box jogos -->
+					<input type="checkbox" name="jogos[]" id="jogo_amazon" value="amazon" title="Amazon Prime">
+					<label for="jogo_amazon">Amazon Prime</label>
+					<input type="checkbox" name="jogos[]" id="jogo_band" value="band" title="Band">
+					<label for="jogo_band">Band</label>
+					<input type="checkbox" name="jogos[]" id="jogo_espn" value="espn" title="ESPN">
+					<label for="jogo_espn">ESPN</label>
+					<input type="checkbox" name="jogos[]" id="jogo_sportv" value="sportv" title="SporTV">
+					<label for="jogo_sportv">SporTV</label>
+					<input type="checkbox" name="jogos[]" id="jogo_tnt" value="tnt" title="TNT Sports">
+					<label for="jogo_tnt">TNT Sports</label>
+					<input type="checkbox" name="jogos[]" id="jogo_vivo" value="vivo" title="Vivo League Pass">
+					<label for="jogo_vivo">Vivo League Pass</label>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Digite aqui o que você achou do site:</legend>
+				<div class="form_field"> <!-- Box mensagem -->
+					<label for="mensagem_txt">Digite sua mensagem aqui:</label>
+					<textarea name="mensagem_txt" id="mensagem_txt" title="Mensagem" cols="50" rows="10"
+						placeholder="Digite"></textarea>
+				</div>
+				<button type="submit" id="enviar" title="Clique aqui para enviar o formulário">Enviar</button>
+				<button type="reset" id="limpar" title="Clique aqui para limpar o formulário">Limpar</button>
+			</fieldset>
+		</form>
+	</main>
+
+	<footer> <!-- Rodapé -->
+		<p>&copy; Carlos André Resende Belo - 1151110-1</p>
+	</footer>
+</body>
+
+</html>

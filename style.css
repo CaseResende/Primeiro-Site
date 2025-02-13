@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+/* Estilo para todas as páginas */
+/* Estilo geral do corpo do documento */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: justify;
+}
+
+/* Estilo para os títulos h2 */
+h2 {
+  background-color: #155dc2;
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Estilo para classe responsivo, faz as duas colunas virarem apenas uma quando a tela está pequena */
+.responsivo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Define a largura máxima */
+@media (max-width: 750px) {
+  .responsivo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cabeçalho */
+/* Estilo geral do cabeçalho */
+header {
+  background-image: linear-gradient(30deg, #65a2f7, #155dc2, #304d75);
+  background-attachment: fixed;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Estilo para as logos */
+.logos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para logo da Uniube */
+.uniube_logo {
+  background-color: white;
+  width: 100px;
+  margin-right: 20px;
+  padding: 2px;
+  border-radius: 5px;
+  padding-bottom: 0px;
+}
+
+/* Estilo para logo da NBA */
+.nba_logo {
+  width: 100px;
+}
+
+/* Estilo para o título principal */
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Barra de navegação */
+/* Estilo geral da barra de navegação */
+nav {
+  background-color: #f7f7f7;
+  width: auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Estilo para a lista não ordenada da barra de navegação */
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para os links na barra de navegação */
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  padding: 10px;
+}
+
+/* Estilo quando o mouse passa por cima do link na barra de navegação */
+nav ul li a:hover {
+  background-color: #155dc2;
+  color: white;
+  width: fit-content;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Rodapé */
+/* Estilo para o rodapé */
+footer {
+  background-image: linear-gradient(270deg, #65a2f7, #155dc2, #304d75);
+  background-attachment: fixed;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Página de links */
+/* Estilo para a tabela */
+table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  border: none;
+  float: left;
+  width: 100%;
+}
+
+/* Estilo para a legenda da tabela */
+caption {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Estilo para o cabeçalho de tabela */
+th {
+  text-align: center;
+  padding: 8px;
+  background-color: #155dc2;
+  color: white;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Estilo para o primeiro cabeçalho da tabela */
+#th_conferencias {
+  font-size: 2rem;
+}
+
+/* Estilo para as células de tabela */
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+/* Estilo para cada linha par da tabela */
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* Estilo de link de cada célula da tabela */
+td a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+}
+
+/* Estilo quando o mouse passa por cima do link na célula da tabela */
+td a:hover {
+  background-color: #155dc2;
+  color: white;
+  border-radius: 5px;
+  display: block;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Estilo para os links de cada item da lista ordenada */
+ol li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  padding: 10px;
+}
+
+/* Estilo quando o mouse passa por cima dos links na lista ordenada */
+ol li a:hover {
+  background-color: #155dc2;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Página de imagens */
+/* Estilo para div imagem */
+.imagem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Estilo para figuras */
+figure {
+  margin: 10px;
+  padding: 5px;
+  width: fit-content;
+  height: auto;
+  border: 2px solid #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
+
+/* Estilo para imagens dentro da tag figure */
+figure img {
+  max-width: fit-content;
+  height: auto;
+}
+
+/* Estilo para a página fale_conosco */
+/* Estilo para o formulário */
+/* Estilo para o fieldset do formulário */
+fieldset {
+  border: 2px solid #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
+  margin-bottom: 10px;
+}
+
+/* Estilo para a legenda do fieldset */
+fieldset legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Estilo para os quadros do formulário */
+.form_field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: start;
+  padding: 5px;
+}
+
+/* Estilo para as labels */
+label {
+  width: 100%;
+  margin: 5px;
+}
+
+/* Estilo para os inputs */
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+select,
+datalist,
+textarea {
+  border: 2px solid #f7f7f7;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Estilo para os botões */
+button {
+  border-color: rgba(0, 0, 0, 0.116);
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* Estilo quando o mouse passa por cima dos botões */
+button:hover {
+  background-color: #155dc2;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.267);
+}
